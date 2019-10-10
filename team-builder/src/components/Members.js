@@ -7,9 +7,9 @@ const Members = props => {
         {props.memberList.map(member => {
         return (
           <div className="member" key={member.id}>
-            <h3>{member.name}</h3>
-            <p>{member.email}</p>
-            <p>{member.role}</p>
+          <h3><span>🧑</span> {member.name}</h3>
+          <p><span>📧</span> {member.email}</p>
+          <p><span>👨‍💻</span> {member.role}</p>
           </div>
           )
         })}  
