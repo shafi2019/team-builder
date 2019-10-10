@@ -2,6 +2,20 @@ import React, { useState } from 'react';
 
 const MemberForm = props => {
 
+  const [member, setMember] = useState({ name: "", email: "", role: ""});
+
+  const handleChange = evt => {
+ 
+    setMember({ ...member, [evt.target.name]: evt.target.value });
+  };
+  const handleSubmit = evt => {
+    evt.preventDefault();
+    props.addMemberFn(member);
+    console.log(member);
+    setMember({ name: "", email: "", role: ""});
+  };
+
+
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="name">Name</label>
