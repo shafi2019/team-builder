@@ -1,5 +1,7 @@
 import React, { useState }  from 'react';
+import MemberForm from './components/Form';
 import './App.css';
+import Members from './components/Members';
 
 function App() {
 
@@ -13,10 +15,22 @@ function App() {
     }
   ]);
 
+  const addMember = member => {
+    const newMember = {
+      id: Date.now(),
+      name: member.name,
+      email: member.email,
+      role: member.role
+    };
+    setMembers([...members, newMember]);
+  };
   return (
     <div className="App">
       <h2>Team List</h2> 
-
+      <div> 
+        <MemberForm addMemberFn={addMember} /> 
+        <Members memberList={members}/>
+      </div> 
     </div>
   );
 }
