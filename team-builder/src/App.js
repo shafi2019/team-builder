@@ -1,12 +1,21 @@
 import React, { useState }  from 'react';
-import Form from './components/Form';
 import './App.css';
 
 function App() {
- 
+
+  const [members, setMembers] = useState([
+    {
+      id: 1,
+      name: "Shafi",
+      email: "masoumi2017@icloud.com",
+      role: "Full Stack Web Developer",
+
+    }
+  ]);
+
   return (
     <div className="App">
-      <header>Team List</header>
+      <h2>Team List</h2> 
 
     </div>
   );
