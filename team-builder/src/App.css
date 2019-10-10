@@ -1,7 +1,9 @@
-
 .App {
   text-align: center;
+  background-image: url(https://images.pexels.com/photos/574080/pexels-photo-574080.jpeg?cs=srgb&dl=code-coding-developer-574080.jpg&fm=jpg);
+  color:CornflowerBlue ;
 }
+
 form {
   display: flex;
   flex-direction: column;
@@ -12,8 +14,34 @@ form {
 form input {
   margin: 5px 0;
 }
+button {
+  margin-top: 12%;
+  padding: 3%;
+}
+
+button:hover {
+  color:white;
+  background-color: darkblue;
+}
+
 .member-list {
   display: flex;
   flex-wrap: wrap;
 }
 
+.member {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12), 0 5px 2px rgba(0, 0, 0, 0.24);
+  width: 100%;
+  max-width: 250px;
+  padding: 10px;
+  margin: 16px auto;
+  text-align: left;
+  background-image: url(https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?cs=srgb&dl=daylight-environment-forest-459225.jpg&fm=jpg);
+  color: #000000;
+}
+input {
+  padding: 3%;
+}
+select {
+  padding: 3%;
+}
